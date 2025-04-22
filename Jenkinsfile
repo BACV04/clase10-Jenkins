@@ -11,6 +11,7 @@ pipeline {
     stage('Check Python Version') {
       steps {
         bat '"C:\\Users\\braya\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
+        
       }
     }
 
@@ -23,8 +24,8 @@ pipeline {
     stage('Instalar dependencias') {
       steps {
         bat """
-          "C:\\Users\\braya\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m venv %VENV%
-          call %VENV%\\Scripts\\activate.bat
+          "C:\\Users\\braya\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m venv "%VENV%"
+          call "%VENV%\\Scripts\\activate.bat"
           "%VENV%\\Scripts\\pip.exe" install --upgrade pip
           "%VENV%\\Scripts\\pip.exe" install -r requirements.txt
         """
