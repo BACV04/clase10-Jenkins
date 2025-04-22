@@ -16,7 +16,7 @@ pipeline {
 
     stage('Clonar repositorio') {
       steps {
-        git branch: 'main', url: 'https://github.com/BACV04/jenkins-docker-taller.git'
+        git branch: 'main', url: 'https://github.com/BACV04/clase10-Jenkins.git'
       }
     }
 
